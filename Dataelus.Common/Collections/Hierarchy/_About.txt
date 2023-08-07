@@ -1,0 +1,2 @@
+﻿The purpose of this hierarchy system is to detect how groups of objects relate.
+

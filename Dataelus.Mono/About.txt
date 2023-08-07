@@ -1,0 +1,7 @@
+﻿This library is intended to store classes which run on the Mono or .NET Framework,
+but are not part of the Portable Class Library.
+
+Parent Namespace is Dataelus.Mono
+
+Sub namespaces:
+	SQLServer - Classes specific to Microsoft SQL Server

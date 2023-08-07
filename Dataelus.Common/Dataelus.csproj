@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47769E05-CA35-45DA-98A2-57036F4E80B9}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Dataelus</RootNamespace>
+    <AssemblyName>Dataelus.Common</AssemblyName>
+    <TargetFrameworkProfile>Profile5</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\..\..\MonoKeyPair.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DocumentationFile>bin\Debug\Dataelus.Common.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ICollection2.cs" />
+    <Compile Include="CollectionBase.cs" />
+    <Compile Include="ICollectionSearchable.cs" />
+    <Compile Include="IStringComparisonMethod.cs" />
+    <Compile Include="IStringFilterCriteria.cs" />
+    <Compile Include="IStringFilterer.cs" />
+    <Compile Include="StringCollection.cs" />
+    <Compile Include="StringComparisonMethod.cs" />
+    <Compile Include="StringEqualityComparer.cs" />
+    <Compile Include="StringUtils.cs" />
+    <Compile Include="Grid\GridCellBase.cs" />
+    <Compile Include="Grid\IGridCell.cs" />
+    <Compile Include="ITextTransformer.cs" />
+    <Compile Include="Search\ISearchLevel.cs" />
+    <Compile Include="Grid\GridCellText.cs" />
+    <Compile Include="Grid\IGridCellText.cs" />
+    <Compile Include="Grid\GridCellTextCollection.cs" />
+    <Compile Include="IClonable.cs" />
+    <Compile Include="TableDisplay\ColumnDef.cs" />
+    <Compile Include="TableDisplay\ColumnDefCollection.cs" />
+    <Compile Include="TableDisplay\ColumnDefSticky.cs" />
+    <Compile Include="TableDisplay\ColumnSorter.cs" />
+    <Compile Include="TableDisplay\ColumnSorterSticky.cs" />
+    <Compile Include="TableDisplay\IColumnDef.cs" />
+    <Compile Include="TableDisplay\IColumnDefSticky.cs" />
+    <Compile Include="Search\ISearchStatus.cs" />
+    <Compile Include="Search\SearchLevel.cs" />
+    <Compile Include="Search\ISearchCollection.cs" />
+    <Compile Include="IObjectCloner.cs" />
+    <Compile Include="Table\ICellValue.cs" />
+    <Compile Include="Table\IRecordValue.cs" />
+    <Compile Include="IEquatable.cs" />
+    <Compile Include="Wizard\IWizardNavigation.cs" />
+    <Compile Include="Wizard\WizardNavAction.cs" />
+    <Compile Include="Wizard\IWizardNavBehavior.cs" />
+    <Compile Include="TableIssue\IssueBase.cs" />
+    <Compile Include="TableIssue\CellIssueItemBase.cs" />
+    <Compile Include="TableIssue\ICellIssueItem.cs" />
+    <Compile Include="TableIssue\ICellIssueItemCollection.cs" />
+    <Compile Include="TableIssue\CellIssueItemCollectionBase.cs" />
+    <Compile Include="TableIssue\IIssue.cs" />
+    <Compile Include="TableIssue\IObjectIssueItem.cs" />
+    <Compile Include="TableIssue\ObjectIssueItemBase.cs" />
+    <Compile Include="TableIssue\ObjectIssueItemCollection.cs" />
+    <Compile Include="Table\IRecordValueCollection.cs" />
+    <Compile Include="ITextValue.cs" />
+    <Compile Include="IObjectValue.cs" />
+    <Compile Include="Search\IGridSearch.cs" />
+    <Compile Include="Search\ISearcherPriorityCollection.cs" />
+    <Compile Include="Search\ISearchFilterPriorityCollection.cs" />
+    <Compile Include="Search\ISearchFilterPriority.cs" />
+    <Compile Include="Search\ISearchFilter.cs" />
+    <Compile Include="Search\ISearcherPriority.cs" />
+    <Compile Include="Search\ISearcher.cs" />
+    <Compile Include="IPrioritized.cs" />
+    <Compile Include="PriorityComparer.cs" />
+    <Compile Include="Grid\IGridView.cs" />
+    <Compile Include="Wizard\WizardNavigation.cs" />
+    <Compile Include="Wizard\Selection\IGridSelectableRowView.cs" />
+    <Compile Include="Wizard\UI\IWizardView.cs" />
+    <Compile Include="Wizard\UI\WizardController.cs" />
+    <Compile Include="Wizard\UI\IWizardStepNavBehavior.cs" />
+    <Compile Include="Log\LogManager.cs" />
+    <Compile Include="Log\ILogManager.cs" />
+    <Compile Include="Log\ILogMessage.cs" />
+    <Compile Include="Log\LogCategory.cs" />
+    <Compile Include="Log\IParameter.cs" />
+    <Compile Include="Log\Parameter.cs" />
+    <Compile Include="Log\ParameterCollection.cs" />
+    <Compile Include="Log\LogMessage.cs" />
+    <Compile Include="Log\ILogMessageParameters.cs" />
+    <Compile Include="Log\LogMessageParams.cs" />
+    <Compile Include="Log\ILogException.cs" />
+    <Compile Include="Log\LogException.cs" />
+    <Compile Include="Log\LogParamsException.cs" />
+    <Compile Include="Log\ILogFilenameManager.cs" />
+    <Compile Include="Log\LogFilenameManagerWeb.cs" />
+    <Compile Include="Log\LogFilenameManagerDesktop.cs" />
+    <Compile Include="Log\LogFilenameManager.cs" />
+    <Compile Include="_delegates.cs" />
+    <Compile Include="Log\LogManagerDesktop.cs" />
+    <Compile Include="IFileIOServices.cs" />
+    <Compile Include="Log\LogManagerAggregator.cs" />
+    <Compile Include="Log\LogObjectCollection.cs" />
+    <Compile Include="Log\IStringSerializer.cs" />
+    <Compile Include="Log\ParameterComplex.cs" />
+    <Compile Include="Log\LogExceptionParam.cs" />
+    <Compile Include="Log\LogMessageError.cs" />
+    <Compile Include="Table\RecordValueCollection.cs" />
+    <Compile Include="Table\RecordValue.cs" />
+    <Compile Include="Table\CellValue.cs" />
+    <Compile Include="EDD\TableValidationResult.cs" />
+    <Compile Include="Wizard\Selection\ITextGridView.cs" />
+    <Compile Include="Wizard\Selection\IObjectGridView.cs" />
+    <Compile Include="Wizard\Selection\ICellText.cs" />
+    <Compile Include="Wizard\Selection\ICellObject.cs" />
+    <Compile Include="Wizard\UI\HMVC\IControllerWizardStep.cs" />
+    <Compile Include="Wizard\UI\HMVC\IControllerWizardNav.cs" />
+    <Compile Include="HMVC\ActionEvent.cs" />
+    <Compile Include="HMVC\IActionEvent.cs" />
+    <Compile Include="HMVC\IActionEventTyped.cs" />
+    <Compile Include="Wizard\StepNumberType.cs" />
+    <Compile Include="HMVC\IControllerBase.cs" />
+    <Compile Include="HMVC\IControllerMaster.cs" />
+    <Compile Include="Wizard\WizardNavActionEvent.cs" />
+    <Compile Include="Wizard\UI\HMVC\ControllerWizardNav1.cs" />
+    <Compile Include="Wizard\UI\IWizardNavigatingEventArgs.cs" />
+    <Compile Include="Wizard\UI\WizardNavigatingEventArgs.cs" />
+    <Compile Include="Wizard\UI\HMVC\ControllerWizardStep1.cs" />
+    <Compile Include="Wizard\UI\HMVC\IWizardControllerMaster.cs" />
+    <Compile Include="Wizard\UI\HMVC\WizardControllerMaster.cs" />
+    <Compile Include="Wizard\UI\HMVC\NavigatingEventArgs.cs" />
+    <Compile Include="Wizard\UI\IWizardController2.cs" />
+    <Compile Include="Wizard\UI\IWizardController.cs" />
+    <Compile Include="Table\Column.cs" />
+    <Compile Include="Table\ColumnCollection.cs" />
+    <Compile Include="Table\RowText.cs" />
+    <Compile Include="Table\RowTextCollection.cs" />
+    <Compile Include="Table\TextTable.cs" />
+    <Compile Include="FilterCascade\FilterTextTable.cs" />
+    <Compile Include="FilterCascade\FilterTextItem.cs" />
+    <Compile Include="FilterCascade\FilterTextItemCollection.cs" />
+    <Compile Include="FilterCascade\FilterTextRule.cs" />
+    <Compile Include="FilterCascade\IFilterData.cs" />
+    <Compile Include="FilterCascade\FilterTextRuleCollection.cs" />
+    <Compile Include="FilterCascade\IFilterTextItem.cs" />
+    <Compile Include="FilterCascade\FilterTextTableSql.cs" />
+    <Compile Include="FilterCascade\FilterTextItemData.cs" />
+    <Compile Include="FilterCascade\FilterTextItemDataCollection.cs" />
+    <Compile Include="Table\ObjectTable.cs" />
+    <Compile Include="Table\Generic\RowBase.cs" />
+    <Compile Include="Table\ObjectRow.cs" />
+    <Compile Include="Table\ObjectRowCollection.cs" />
+    <Compile Include="Table\ObjectColumn.cs" />
+    <Compile Include="Table\ObjectColumnCollection.cs" />
+    <Compile Include="FilterCascade\FilterTextTableSqlHierarchy.cs" />
+    <Compile Include="CodedHierarchyNode.cs" />
+    <Compile Include="CodedHierarchyNodeCollection.cs" />
+    <Compile Include="FilterCascade\IFilterTableAssociator.cs" />
+    <Compile Include="FilterCascade\FilterTableAssociatorBase.cs" />
+    <Compile Include="ManyToMany.cs" />
+    <Compile Include="FilterCascade\UI\IFilterCascadeView.cs" />
+    <Compile Include="FilterCascade\UI\IFilterCascadePresenter.cs" />
+    <Compile Include="FilterCascade\IFilterItem.cs" />
+    <Compile Include="Utilities\DbUtils.cs" />
+    <Compile Include="Table\ITable.cs" />
+    <Compile Include="Table\RowText2.cs" />
+    <Compile Include="FilterCascade\FilterDataBoolean.cs" />
+    <Compile Include="FilterCascade\FilterDataDateRange.cs" />
+    <Compile Include="FilterCascade\FilterDataBase.cs" />
+    <Compile Include="FilterCascade\FilterDataNumeric.cs" />
+    <Compile Include="FilterCascade\INonTextFilter.cs" />
+    <Compile Include="FilterCascade\NonTextFilter.cs" />
+    <Compile Include="FilterCascade\BooleanFilter.cs" />
+    <Compile Include="FilterCascade\DateRangeFilter.cs" />
+    <Compile Include="IDataServices.cs" />
+    <Compile Include="IGraphNode.cs" />
+    <Compile Include="GraphNode.cs" />
+    <Compile Include="GraphValueDisplayNode.cs" />
+    <Compile Include="GraphValueDisplay.cs" />
+    <Compile Include="GraphValueDisplayRootNode.cs" />
+    <Compile Include="ITextInputInterpreter.cs" />
+    <Compile Include="ITextInputParser.cs" />
+    <Compile Include="Table\Comparison\IssueItem.cs" />
+    <Compile Include="Table\Comparison\IRecordEvaluator.cs" />
+    <Compile Include="Table\Comparison\IRecordEqualityComparer.cs" />
+    <Compile Include="Table\CellRange.cs" />
+    <Compile Include="AppAccess.cs" />
+    <Compile Include="Table\Comparison\TableComparer.cs" />
+    <Compile Include="Table\Comparison\Generic\IRecordEqualityComparer.cs" />
+    <Compile Include="Table\Comparison\Generic\TableComparer.cs" />
+    <Compile Include="Table\Comparison\Generic\IRecordEvaluator.cs" />
+    <Compile Include="Table\Comparison\Generic\ITableIterator.cs" />
+    <Compile Include="ITypeConverter.cs" />
+    <Compile Include="EDD\EditorData.cs" />
+    <Compile Include="FilterCascade\WidgetData\IFilterSelectableTextValuesCache.cs" />
+    <Compile Include="FilterCascade\WidgetData\FilterSelectableTextValuesCache.cs" />
+    <Compile Include="FilterCascade\WidgetData\FilterSelectableValuesCache.cs" />
+    <Compile Include="FilterCascade\WidgetData\IFilterSelectableValuesCache.cs" />
+    <Compile Include="FilterCascade\FilterObjectTable.cs" />
+    <Compile Include="FilterCascade\IFilterObjectItem.cs" />
+    <Compile Include="FilterCascade\IFilterValueItem.cs" />
+    <Compile Include="FilterCascade\FilterValueItem.cs" />
+    <Compile Include="FilterCascade\FilterObjectItemBase.cs" />
+    <Compile Include="FilterCascade\FilterValueItemData.cs" />
+    <Compile Include="FilterCascade\FilterObjectItemData.cs" />
+    <Compile Include="FilterCascade\FilterValueItemCollection.cs" />
+    <Compile Include="Database\DBField.cs" />
+    <Compile Include="Database\DBFieldCollection.cs" />
+    <Compile Include="Database\DBFieldComparer.cs" />
+    <Compile Include="Database\DBFieldSimple.cs" />
+    <Compile Include="Database\DBConstraint.cs" />
+    <Compile Include="Database\DBConstraintCollection.cs" />
+    <Compile Include="Database\IDBField.cs" />
+    <Compile Include="Database\DBFieldSimpleComparer.cs" />
+    <Compile Include="Database\IDBFieldSimple.cs" />
+    <Compile Include="Database\IDBFieldSimpleComparer.cs" />
+    <Compile Include="TableDisplay\ISQLField.cs" />
+    <Compile Include="EDD\IEDDField.cs" />
+    <Compile Include="EDD\IEDDRecordValidationRule.cs" />
+    <Compile Include="EDD\EDDField.cs" />
+    <Compile Include="EDD\EDDFieldCollection.cs" />
+    <Compile Include="EDD\EDDRecordValidationRule.cs" />
+    <Compile Include="Database\SQL\ISQLParameterMultiValue.cs" />
+    <Compile Include="Database\SQL\ISQLParameterValue.cs" />
+    <Compile Include="Database\SQL\SQLCommandParameter.cs" />
+    <Compile Include="Database\SQL\SQLCommandParameterized.cs" />
+    <Compile Include="Database\SQL\SQLFieldStringEqualityComparer.cs" />
+    <Compile Include="Database\SQL\SQLParameterMultiValue.cs" />
+    <Compile Include="Database\SQL\SQLParameterMultiValueCollection.cs" />
+    <Compile Include="Database\SQL\SQLParameterValue.cs" />
+    <Compile Include="Database\SQL\SQLParameterValueCollection.cs" />
+    <Compile Include="Log\JSONStringSerializer.cs" />
+    <Compile Include="ListBase.cs" />
+    <Compile Include="IScalarRange.cs" />
+    <Compile Include="IUniqueIdentifier.cs" />
+    <Compile Include="IGlobalUniqueIdentifier.cs" />
+    <Compile Include="UniqueIdentifierManager.cs" />
+    <Compile Include="Database\SQL\SQLBuilder.cs" />
+    <Compile Include="Int32Comparer.cs" />
+    <Compile Include="Int32EqualityComparer.cs" />
+    <Compile Include="Database\DBConstraintColumn.cs" />
+    <Compile Include="Database\DBConstraintColumnCollection.cs" />
+    <Compile Include="Database\DBConstraintColumnComparer.cs" />
+    <Compile Include="Database\IDBQuerier.cs" />
+    <Compile Include="Database\SQLLanguage\SQLLang.cs" />
+    <Compile Include="Table\ObjectTableComparer.cs" />
+    <Compile Include="Table\Comparison\Generic\RecordEvaluator.cs" />
+    <Compile Include="JSON\CustomDictionaryConverter.cs" />
+    <Compile Include="JSON\GenericDictionaryJsonConverter.cs" />
+    <Compile Include="FilterCascade\WidgetData\TextValuesCache.cs" />
+    <Compile Include="Table\RowEditState.cs" />
+    <Compile Include="Table\EditTrackingState.cs" />
+    <Compile Include="Log\IErrorLogger.cs" />
+    <Compile Include="CSV\CSVServices.cs" />
+    <Compile Include="CSV\CSVExtensions.cs" />
+    <Compile Include="Extensions\StringBuilderExtensions.cs" />
+    <Compile Include="Database\DBFieldSimpleEqualityComparer.cs" />
+    <Compile Include="Database\DBPrimaryKey.cs" />
+    <Compile Include="Database\DBPrimaryKeyColumn.cs" />
+    <Compile Include="Database\DBPrimaryKeyColumnCollection.cs" />
+    <Compile Include="Database\DBPrimaryKeyCollection.cs" />
+    <Compile Include="Database\SQL\ISQLCommandValueParameters.cs" />
+    <Compile Include="Database\SQL\ISQLCommandParameterized.cs" />
+    <Compile Include="Database\SQL\SQLWhereClause.cs" />
+    <Compile Include="Database\SQLLanguage\SQLLanguageImplementation.cs" />
+    <Compile Include="FilterCascade\WidgetData\ITextValuesCache.cs" />
+    <Compile Include="Table\InvalidValueException.cs" />
+    <Compile Include="Database\DBTableDependancyComparer.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Database\DBTableConstraintCollection.cs" />
+    <Compile Include="Database\DBTableConstraint.cs" />
+    <Compile Include="TableIssue\ICellIssueItemPaged.cs" />
+    <Compile Include="TableIssue\CellIssueItemPagedCollectionBase.cs" />
+    <Compile Include="TableIssue\CellIssueItemPagedBase.cs" />
+    <Compile Include="TableIssue\ICellIssueItemPagedComparer.cs" />
+    <Compile Include="Grid\IGridCellComparer.cs" />
+    <Compile Include="Database\DBFieldAssociation.cs" />
+    <Compile Include="Database\DBFieldAssociationCollection.cs" />
+    <Compile Include="EDD\TableValidationResultCollection.cs" />
+    <Compile Include="EDD\Producer\EDDRecordProducerBase.cs" />
+    <Compile Include="EDD\ITableValidationResult.cs" />
+    <Compile Include="Table\RowDeletedAction.cs" />
+    <Compile Include="EDD\Producer\DatabaseRecordProducerTableBase.cs" />
+    <Compile Include="Database\IDBFieldAdv.cs" />
+    <Compile Include="Database\DBFieldAdv.cs" />
+    <Compile Include="Database\SQL\SQLCommandValueParameters.cs" />
+    <Compile Include="Database\SQL\SQLFieldValue.cs" />
+    <Compile Include="Database\DBSchematic.cs" />
+    <Compile Include="Database\SQL\SQLParameterNameBuilder.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="IdentifiedList.cs" />
+    <Compile Include="MatchTableEditor.cs" />
+    <Compile Include="MatchList.cs" />
+    <Compile Include="Int64EqualityComparer.cs" />
+    <Compile Include="UniqueListBase.cs" />
+    <Compile Include="Table\ObjectRowAddedEventArgs.cs" />
+    <Compile Include="Table\ObjectRowDeletedEventArgs.cs" />
+    <Compile Include="CollectionEditor.cs" />
+    <Compile Include="Table\ObjectRowChangedEventArgs.cs" />
+    <Compile Include="CrossTabulator.cs" />
+    <Compile Include="ListItemPropertyChangedEventArgs.cs" />
+    <Compile Include="IdentifiedOrderedList.cs" />
+    <Compile Include="IdentifiedSelectedList.cs" />
+    <Compile Include="IdentifiedSelectedOrderedList.cs" />
+    <Compile Include="BooleanListIntersector.cs" />
+    <Compile Include="IBooleanIntersectList.cs" />
+    <Compile Include="IIntegerIntersectList.cs" />
+    <Compile Include="IntegerListIntersector.cs" />
+    <Compile Include="Collections\IOrderedListItem.cs" />
+    <Compile Include="Collections\StickyTo.cs" />
+    <Compile Include="Collections\IOrderedListItemSticky.cs" />
+    <Compile Include="Collections\OrderedListItemComparer.cs" />
+    <Compile Include="Collections\OrderedListItemStickyComparer.cs" />
+    <Compile Include="IntComparerReverse.cs" />
+    <Compile Include="Collections\OrderedList.cs" />
+    <Compile Include="Collections\OrderedListItem.cs" />
+    <Compile Include="Collections\OrderedListSavable.cs" />
+    <Compile Include="Collections\OrderedListItemSavable.cs" />
+    <Compile Include="Collections\KeyedValue.cs" />
+    <Compile Include="Collections\OrderedListItemSticky.cs" />
+    <Compile Include="Collections\OrderedListItemStickySavable.cs" />
+    <Compile Include="FilterCascade\UI\IFilterTextCascadeController.cs" />
+    <Compile Include="FilterCascade\UI\IFilterTextCascadeView.cs" />
+    <Compile Include="Collections\Hierarchy\Class1.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="IComboSelectionSource.cs" />
+    <Compile Include="NullableEqualityComparer.cs" />
+    <Compile Include="BooleanIntersectListBase.cs" />
+    <Compile Include="Extensions\IListExtensions.cs" />
+    <Compile Include="Extensions\UIModel\CollectionModelExtensions.cs" />
+    <Compile Include="IListTransactable.cs" />
+    <Compile Include="Wizard\WizardNavActionException.cs" />
+    <Compile Include="Collections\OrderedList2.cs" />
+    <Compile Include="Collections\OrderedListItemComparer2.cs" />
+    <Compile Include="ListBaseTracked.cs" />
+    <Compile Include="DistinctListBase.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="ICollectionTracked.cs" />
+    <Compile Include="Collections\IOrderedListObject.cs" />
+    <Compile Include="EDD\EDDProcessor.cs" />
+    <Compile Include="EDD\EDDProcessResult.cs" />
+    <Compile Include="EDD\Processor\IReaderSingleFile.cs" />
+    <Compile Include="EDD\Processor\IValidator.cs" />
+    <Compile Include="EDD\Processor\ICSVParser.cs" />
+    <Compile Include="EDD\Processor\EDDBatch.cs" />
+    <Compile Include="EDD\Processor\EDDColumnMap.cs" />
+    <Compile Include="EDD\Processor\IDatabaseUploaderSingle.cs" />
+    <Compile Include="EDD\Processor\IDatabaseUploader.cs" />
+    <Compile Include="EDD\Processor\EDDBatchResult.cs" />
+    <Compile Include="EDD\Processor\DatabaseUploaderResult.cs" />
+    <Compile Include="EDD\Processor\EDDFileUploadRecord.cs" />
+    <Compile Include="EDD\Processor\IReaderSingleCSV.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Search\" />
+    <Folder Include="Grid\" />
+    <Folder Include="TableDisplay\" />
+    <Folder Include="TableIssue\" />
+    <Folder Include="EDD\" />
+    <Folder Include="Table\" />
+    <Folder Include="Database\" />
+    <Folder Include="Wizard\" />
+    <Folder Include="Wizard\Selection\" />
+    <Folder Include="Wizard\UI\" />
+    <Folder Include="Log\" />
+    <Folder Include="Wizard\UI\HMVC\" />
+    <Folder Include="COR\" />
+    <Folder Include="HMVC\" />
+    <Folder Include="FilterCascade\" />
+    <Folder Include="FilterCascade\WidgetData\" />
+    <Folder Include="Table\Generic\" />
+    <Folder Include="FilterCascade\UI\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Table\Comparison\" />
+    <Folder Include="Table\Comparison\Generic\" />
+    <Folder Include="Database\SQL\" />
+    <Folder Include="Database\SQLLanguage\" />
+    <Folder Include="JSON\" />
+    <Folder Include="CSV\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="EDD\Producer\" />
+    <Folder Include="Collections\" />
+    <Folder Include="Collections\Hierarchy\" />
+    <Folder Include="Extensions\UIModel\" />
+    <Folder Include="EDD\Processor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TableDisplay\Doc - Sticky Column Sorting.txt" />
+    <None Include="HMVC\_about.txt" />
+    <None Include="_AboutDataelus.txt" />
+    <None Include="Collections\Hierarchy\_About.txt" />
+    <None Include="Extensions\UIModel\_About.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

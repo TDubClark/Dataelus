@@ -1,0 +1,23 @@
+﻿Rules for sorting sticky objects
+9/25/2014
+
+If one of the objects is sticky, and the other is not, then the sticky takes precedence
+
+
+First round, is to respect absolute position stickiness
+
+Then after that is all sorted, we go through and merge in where the other columns belong, according to those columns which are sticky to other columns.
+
+Process:
+1) Remove all items which are sticky to a column
+2) Add those items back in right after the appropriate column
+
+
+
+Additional Rules for handling merges
+1) Start with a base list, into which order is merged.
+	- This starts with each column being stuck to the column preceding it
+	- Second, if a column is assigned a specific order, then it becomes "unstuck"
+	- When ordering, stickiness takes precedence
+
+

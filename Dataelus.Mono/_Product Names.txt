@@ -1,0 +1,57 @@
+﻿AQuerIUM (dynamic querying)
+
+	Analytical
+	Quering
+	Interface
+		and
+	Utilities
+	Module
+
+	Analytical
+	Quering
+	Interface
+	via
+	User
+	Modules
+
+
+AVIUS (graphing) (this is also the name of a English software company - http://www.aviusinsight.com/)
+	Analitical
+	Visualization
+	Interface
+		and
+	Utilities
+	Subsystem
+
+AVIUX (graphing)
+	Analitical
+	Visualization
+	Interface
+		and
+	Utilities
+	eXtension
+
+AVIEX (graphing) (this is also the name of an Aircraft Company)
+	Analitical
+	Visualization
+	Interface
+		and
+	Export
+	eXtension
+
+AVIEL (this is also the name of a place in Israel)
+	Analitical
+	Visualization
+	Interface
+		and
+	Export
+	Logic
+
+
+AQuerIUS (no: reminds people of a horoscope)
+
+	Analytical
+	Quering
+	Interface
+	via
+	User

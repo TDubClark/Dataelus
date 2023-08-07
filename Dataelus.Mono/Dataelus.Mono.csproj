@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{620E77F1-65C0-4912-9D8D-42F92F6308D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Dataelus.Mono</RootNamespace>
+    <AssemblyName>Dataelus.Mono</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\..\..\MonoKeyPair.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DocumentationFile>bin\Debug\Dataelus.Mono.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DBQuerier.cs" />
+    <Compile Include="FileIOServices.cs" />
+    <Compile Include="DataServices.cs" />
+    <Compile Include="DataTableComparer.cs" />
+    <Compile Include="DataTypeConverter.cs" />
+    <Compile Include="CollectionServices.cs" />
+    <Compile Include="DBCommander.cs" />
+    <Compile Include="SQLServer\SQLServerDataTypeConverter.cs" />
+    <Compile Include="SQLServer\SQLLib.cs" />
+    <Compile Include="DataEditorController.cs" />
+    <Compile Include="SQLServer\SQLServerDataServices.cs" />
+    <Compile Include="Extensions\ObjectDataExtensions.cs" />
+    <Compile Include="DynamiQuery\TableSelectionDef.cs" />
+    <Compile Include="DynamiQuery\IViewSelection.cs" />
+    <Compile Include="DynamiQuery\IControllerSelection.cs" />
+    <Compile Include="DynamiQuery\TableSelectionDefCollection.cs" />
+    <Compile Include="DynamiQuery\IWizardController.cs" />
+    <Compile Include="DynamiQuery\DynamicQueryDef.cs" />
+    <Compile Include="DynamiQuery\TableSelectionUIDef.cs" />
+    <Compile Include="DataIOServices.cs" />
+    <Compile Include="DataValueUtils.cs" />
+    <Compile Include="Extensions\DataIOExtensions.cs" />
+    <Compile Include="Extensions\TableExtensions.cs" />
+    <Compile Include="IDBQuerier2.cs" />
+    <Compile Include="DataTableEditorController.cs" />
+    <Compile Include="IDataTableEditorController.cs" />
+    <Compile Include="SQLServer\DBSchemaType.cs" />
+    <Compile Include="SQLServer\CommandBuilder.cs" />
+    <Compile Include="SelectedItemDataEditorControllerBase.cs" />
+    <Compile Include="SQLServer\SQLExtensions.cs" />
+    <Compile Include="SQLServer\SQLServerQuerier.cs" />
+    <Compile Include="DatabaseRecordProducerTable.cs" />
+    <Compile Include="SQLServer\ISQLServerCommandBuilder.cs" />
+    <Compile Include="SQLServer\SQLServerInteractor.cs" />
+    <Compile Include="DynamiQuery\TableSelectionDefComparer.cs" />
+    <Compile Include="Misc\CodeCreator.cs" />
+    <Compile Include="DynamiQuery\IEditorView.cs" />
+    <Compile Include="DynamiQuery\IEditorController.cs" />
+    <Compile Include="DynamiQuery\FieldSelection.cs" />
+    <Compile Include="DynamiQuery\DBTable.cs" />
+    <Compile Include="DynamiQuery\ITableRecordEditorController.cs" />
+    <Compile Include="DynamiQuery\ITableRecordEditorView.cs" />
+    <Compile Include="AppLESeed.cs" />
+    <Compile Include="EDD\EDDProcessor.cs" />
+    <Compile Include="IDBInteractor.cs" />
+    <Compile Include="IFieldValueQuerier.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Dataelus.Common\Dataelus.csproj">
+      <Project>{47769E05-CA35-45DA-98A2-57036F4E80B9}</Project>
+      <Name>Dataelus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dataelus.UI\Dataelus.UI.csproj">
+      <Project>{1A041601-B20B-4064-82C6-0C1D390B49C2}</Project>
+      <Name>Dataelus.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="About.txt" />
+    <None Include="_Product Names.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SQLServer\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="DynamiQuery\" />
+    <Folder Include="Misc\" />
+    <Folder Include="EDD\" />
+  </ItemGroup>
+</Project>

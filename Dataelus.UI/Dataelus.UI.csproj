@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{1A041601-B20B-4064-82C6-0C1D390B49C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Dataelus.UI</RootNamespace>
+    <AssemblyName>Dataelus.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile5</TargetFrameworkProfile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\..\..\..\MonoKeyPair.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DocumentationFile>bin\Debug\Dataelus.UI.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GridItemViewer\ControllerBase.cs" />
+    <Compile Include="GridItemViewer\IController.cs" />
+    <Compile Include="GridItemViewer\IView.cs" />
+    <Compile Include="TableColumnDisplay\IColumnDefView.cs" />
+    <Compile Include="TableColumnDisplay\IController.cs" />
+    <Compile Include="TableColumnDisplay\ControllerBase.cs" />
+    <Compile Include="GridItemViewer\Generic\IView.cs" />
+    <Compile Include="GridItemViewer\Generic\IController.cs" />
+    <Compile Include="GridItemViewer\Generic\Controller.cs" />
+    <Compile Include="GridEditor\IView.cs" />
+    <Compile Include="GridEditor\IController.cs" />
+    <Compile Include="VerticalDirection.cs" />
+    <Compile Include="HorizontalDirection.cs" />
+    <Compile Include="GridEditor\Controller.cs" />
+    <Compile Include="TableCompareViewer\IView.cs" />
+    <Compile Include="TableCompareViewer\IController.cs" />
+    <Compile Include="TableCompareViewer\Controller.cs" />
+    <Compile Include="GridEditor\ControllerObjectTable.cs" />
+    <Compile Include="IDataEditorController.cs" />
+    <Compile Include="IDataEditorView.cs" />
+    <Compile Include="GridEditor\IValidator.cs" />
+    <Compile Include="GridEditor\IDataSaver.cs" />
+    <Compile Include="GridItemViewer\Generic\IViewIssueBrowser.cs" />
+    <Compile Include="GridItemViewer\Generic\IControllerIssueBrowser.cs" />
+    <Compile Include="GridItemViewer\ControllerPagedBase.cs" />
+    <Compile Include="GridItemViewer\Generic\IViewGrid.cs" />
+    <Compile Include="GridItemViewer\Generic\IControllerGrid.cs" />
+    <Compile Include="GridItemViewer\Generic\IViewGridPaged.cs" />
+    <Compile Include="DatabaseDefinition\IControllerSimpleConstraints.cs" />
+    <Compile Include="DatabaseDefinition\IViewSimpleConstraints.cs" />
+    <Compile Include="DatabaseDefinition\ControllerSimpleConstraints.cs" />
+    <Compile Include="RecordEditor\IRecordEditorController.cs" />
+    <Compile Include="RecordEditor\IRecordEditorView.cs" />
+    <Compile Include="RecordEditor\RecordEditorController.cs" />
+    <Compile Include="MatchTableEditor\IController.cs" />
+    <Compile Include="GridEditor\Validator\GridValidation.cs" />
+    <Compile Include="GridItemViewer\ControllerPagedViewerBase.cs" />
+    <Compile Include="GridItemViewer\IControllerViewOnly.cs" />
+    <Compile Include="KeyValueEditor\IController.cs" />
+    <Compile Include="KeyValueEditor\IView.cs" />
+    <Compile Include="KeyValueEditor\Controller.cs" />
+    <Compile Include="MatchTableEditor\IGridView.cs" />
+    <Compile Include="MatchTableEditor\IColumnItem.cs" />
+    <Compile Include="MatchTableEditor\IDTagComparer.cs" />
+    <Compile Include="MatchTableEditor\IRowItem.cs" />
+    <Compile Include="MatchTableEditor\ViewWidgetManager.cs" />
+    <Compile Include="MatchTableEditor\ViewWidget.cs" />
+    <Compile Include="MatchTableEditor\ViewGridManager.cs" />
+    <Compile Include="CollectionEditor\IController.cs" />
+    <Compile Include="CollectionEditor\IView.cs" />
+    <Compile Include="CollectionSelector\IController.cs" />
+    <Compile Include="CollectionSelector\IView.cs" />
+    <Compile Include="ObjectFieldView.cs" />
+    <Compile Include="CollectionSelector\SimpleController.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="GridItemViewer\" />
+    <Folder Include="TableColumnDisplay\" />
+    <Folder Include="GridItemViewer\Generic\" />
+    <Folder Include="GridEditor\" />
+    <Folder Include="TableCompareViewer\" />
+    <Folder Include="DatabaseDefinition\" />
+    <Folder Include="RecordEditor\" />
+    <Folder Include="MatchTableEditor\" />
+    <Folder Include="GridEditor\Validator\" />
+    <Folder Include="KeyValueEditor\" />
+    <Folder Include="CollectionEditor\" />
+    <Folder Include="CollectionSelector\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dataelus.Common\Dataelus.csproj">
+      <Project>{47769E05-CA35-45DA-98A2-57036F4E80B9}</Project>
+      <Name>Dataelus</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
